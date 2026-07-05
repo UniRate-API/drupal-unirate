@@ -1,0 +1,7 @@
+unirate.settings:
+  path: '/admin/config/services/unirate-currency'
+  defaults:
+    _form: '\Drupal\unirate\Form\SettingsForm'
+    _title: 'UniRate Currency settings'
+  requirements:
+    _permission: 'administer unirate'

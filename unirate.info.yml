@@ -1,0 +1,6 @@
+name: 'UniRate Currency'
+type: module
+description: 'Currency exchange rate integration via the UniRate API. Provides an injectable service, admin configuration, and a display block for live exchange rates.'
+core_version_requirement: ^10.3 || ^11
+package: 'E-Commerce'
+version: '0.1.0'

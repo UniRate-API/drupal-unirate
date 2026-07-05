@@ -1,0 +1,4 @@
+administer unirate:
+  title: 'Administer UniRate Currency settings'
+  description: 'Configure the UniRate API key and settings.'
+  restrict access: true

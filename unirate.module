@@ -1,0 +1,37 @@
+<?php
+
+/**
+ * @file
+ * UniRate Currency module — exchange rate integration via unirateapi.com.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function unirate_help(string $route_name, RouteMatchInterface $route_match): string {
+  if ($route_name === 'help.page.unirate') {
+    return '<p>' . t('Provides exchange rate data from the <a href=":url">UniRate API</a>. Configure your API key at <a href=":settings">UniRate Currency settings</a>.', [
+      ':url' => 'https://unirateapi.com',
+      ':settings' => '/admin/config/services/unirate-currency',
+    ]) . '</p>';
+  }
+  return '';
+}
+
+/**
+ * Implements hook_theme().
+ */
+function unirate_theme(): array {
+  return [
+    'unirate_currency_rate' => [
+      'variables' => [
+        'from' => NULL,
+        'to' => NULL,
+        'rate' => NULL,
+        'error' => NULL,
+      ],
+    ],
+  ];
+}

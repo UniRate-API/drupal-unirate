@@ -1,0 +1,31 @@
+{
+  "name": "unirate-api/unirate-drupal",
+  "description": "Drupal module — currency exchange rate integration via the UniRate API",
+  "type": "drupal-module",
+  "keywords": ["drupal", "currency", "exchange-rate", "forex", "unirate"],
+  "homepage": "https://github.com/UniRate-API/drupal-unirate",
+  "license": "GPL-2.0-or-later",
+  "require": {
+    "php": ">=8.1"
+  },
+  "require-dev": {
+    "guzzlehttp/guzzle": "^7.8",
+    "phpunit/phpunit": "^10.5 || ^11.1",
+    "psr/log": "^3.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Drupal\\unirate\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Drupal\\Tests\\unirate\\": "tests/src/"
+    }
+  },
+  "extra": {
+    "drupal": {
+      "version": "0.1.0"
+    }
+  }
+}

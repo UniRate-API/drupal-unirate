@@ -1,0 +1,22 @@
+{#
+/**
+ * @file
+ * Template for a UniRate currency rate display.
+ *
+ * Available variables:
+ * - from: Source currency code (e.g. "USD").
+ * - to: Target currency code (e.g. "EUR").
+ * - rate: Exchange rate as a float, or NULL on error.
+ * - error: Error message string, or NULL on success.
+ */
+#}
+<div{{ attributes.addClass('unirate-currency-rate') }}>
+  {% if error %}
+    <p class="unirate-error">{{ error }}</p>
+  {% else %}
+    <span class="unirate-from">{{ from }}</span>
+    <span class="unirate-separator"> = </span>
+    <span class="unirate-rate">{{ rate }}</span>
+    <span class="unirate-to">{{ to }}</span>
+  {% endif %}
+</div>

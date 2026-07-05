@@ -1,0 +1,11 @@
+services:
+  unirate.client:
+    class: Drupal\unirate\UniRateClient
+    factory: [Drupal\unirate\UniRateClientFactory, createFromConfig]
+    arguments:
+      - '@http_client'
+      - '@config.factory'
+      - '@logger.channel.unirate'
+  logger.channel.unirate:
+    parent: logger.channel_base
+    arguments: ['unirate']
